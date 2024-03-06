@@ -48,12 +48,30 @@
 # with open("precos roupas.txt", "a") as arquivo:
 #     for preco in precos:
 #         arquivo.write(str(preco) + "\n")
+# diciplinas = ["RAD \n", "introducao a c \n", "programacao 1 \n"]
+# with open("diciplinas.txt", "w") as file:
+#     file.write("relacao de diciplinas \n")
+#     file.writelines(diciplinas)
+# with open("diciplinas.txt", "r")as file:
+#     print(file.read())
+# with open("texto.txt", "r") as arquivo:
+#     print("representacao original da linha")
+#     for linha in arquivo:
+#         print(repr(linha))
+# with open("texto.txt", "r")as arquivo:
+#     print("conteudo da linha")
+#     for linha in arquivo:
+#         linha_=linha.strip()
+#     print(repr(linha_))
+# minha_lista = ["arroz", "feijao", "carne"]
+# lista_=','. join(minha_lista)
+# with open("texto_.txt", "w")as arquivo:
+#     arquivo.write(lista_)
+import os
 
-
-
-
-
-
-
-
-
+try:
+    os.remove("teste.txt")
+    print("arquivo foi removido")
+except FileNotFoundError as erro:
+    print("arquivo inexistente")
+    print("descricao", erro) 
